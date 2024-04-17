@@ -30,18 +30,16 @@ class Program():
         self.gs.reset_angle(0)
 
         while self.us.distance() > 100:
-            self.jm.run(100)
-            self.bm.run(100)
             print(self.gs.angle())
             if self.gs.angle() <= 1 and self.gs.angle() >= -1:
-                self.jm.run(500)
-                self.bm.run(500)
+                self.jm.run(100)
+                self.bm.run(100)
             else:
                 if self.gs.angle() > 0:
-                    self.jm.run(20)
-                    self.bm.run(500)
+                    self.jm.run(70)
+                    self.bm.run(100)
                 elif self.gs.angle() < 0:
-                    self.jm.run(500)
-                    self.bm.run(20)
+                    self.jm.run(100)
+                    self.bm.run(70)
                     
 
